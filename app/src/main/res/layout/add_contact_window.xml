@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/LAYOUT"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_centerHorizontal="true"
+            android:elegantTextHeight="true"
+            android:text="@string/addContactTitle"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/AddContactUsername"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            style="@style/TEXT"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            android:hint="@string/Register_username"
+            android:textAlignment="center">
+
+        </EditText>
+
+
+        <Button
+            android:id="@+id/AddContactButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BUTTON"
+            android:layout_below="@id/AddContactUsername"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:text="@string/addContact">
+
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>

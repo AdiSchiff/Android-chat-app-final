@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".Settings">
+
+    <RelativeLayout
+        android:id="@+id/SettingsTop"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        style="@style/LAYOUT"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="-5dp">
+
+        <ImageView
+            android:id="@+id/settingsIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            style="@style/Image"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/settings"
+            android:contentDescription="@string/settings_icon" />
+
+        <TextView
+            android:id="@+id/SettingsTopTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/settingsIcon"
+            android:text="@string/settings"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/closeSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            style="@style/Image"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/close_icon"
+            android:contentDescription="@string/settings_button">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/NameLayout"
+        android:layout_width="362dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/SettingsTop"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/serverInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TEXT"
+            android:hint="@string/choose_a_server_url_to_work_with"
+            android:gravity="center"
+            android:textSize="19sp"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/formatUUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TEXT"
+        android:layout_centerInParent="true"
+        android:text="@string/url_format"
+        android:layout_below="@id/NameLayout"
+        android:textSize="17sp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/changeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/BUTTON"
+        android:text="@string/change"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:layout_below="@id/formatUUrl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/dark_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TEXT"
+        android:textSize="25sp"
+        android:layout_marginVertical="30dp"
+        android:layout_toStartOf="@id/theme_switch"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/changeBTN"
+        android:layout_marginStart="30sp"
+        android:text="@string/dark_mode">
+
+    </TextView>
+
+    <Switch
+        android:id="@+id/theme_switch"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginVertical="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/changeBTN"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        tools:ignore="UseSwitchCompatOrMaterialXml">
+
+    </Switch>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TEXT"
+        android:layout_centerInParent="true"
+        android:text="@string/note_changing_to_dark_mode_may_require_login"
+        android:layout_below="@id/theme_switch"
+        android:textSize="17sp">
+
+    </TextView>
+
+
+</RelativeLayout>

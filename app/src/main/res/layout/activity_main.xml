@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/LAYOUT"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/Register_username"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/Register_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/Register_repeat_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/Register_nickname"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/Register_profile_picture"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_pic"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:strokeWidth="0dp" />
+
+        <Button
+            android:id="@+id/chooseImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BUTTON"
+            android:layout_gravity="center_horizontal"
+            android:scrollbarSize="100dp"
+            android:text="@string/Register_upload_image" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BUTTON"
+            android:layout_gravity="center_horizontal"
+            android:scrollbarSize="100dp"
+            android:text="@string/register"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

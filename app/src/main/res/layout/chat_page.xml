@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN">
+
+
+    <RelativeLayout
+        android:id="@+id/ChatPageTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/LAYOUT"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="-5dp">
+
+
+        <ImageButton
+            android:id="@+id/ChatPageBackButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            style="@style/Image"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back"
+            android:contentDescription="@string/back_button">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/ChatPageContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/ChatPageContactProfilePicture"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ChatPageContactProfilePicture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@id/ChatPageBackButton"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:strokeWidth="0dp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ChatPageMassages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ChatPageTop"
+        android:padding="5dp"
+        android:layout_above="@id/ChatPageTypingBox">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/ChatPageTypingBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded"
+        android:ellipsize="middle"
+        android:hint="@string/type_a_message"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_gray"
+        android:textSize="18sp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ChatPageSendBackground"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-50dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@id/ChatPageTypingBox"
+        android:backgroundTint="@android:color/transparent"
+        app:cardCornerRadius="45dp"
+        app:cardElevation="0dp">
+
+
+        <ImageButton
+            android:id="@+id/ChatPageSendButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            style="@style/Image"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/send"
+            android:contentDescription="@string/send_message">
+
+        </ImageButton>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

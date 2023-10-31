@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:id="@+id/ContactsTop"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        style="@style/LAYOUT"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="-5dp">
+
+        <TextView
+            android:id="@+id/ContactsTopTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TEXT"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:text="@string/chats"
+            android:textSize="30sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/ContactsAddContact"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            style="@style/Image"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/ContactsRemoveContact"
+            android:src="@drawable/add_contact"
+            android:background="@null"
+            android:contentDescription="@string/add_contact_button">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/ContactsRemoveContact"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            style="@style/Image"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/ContactsSettings"
+            android:src="@drawable/remove_contact"
+            android:background="@null"
+            android:contentDescription="@string/remove_contact_button">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/ContactsSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            style="@style/Image"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/logoutBtn"
+            android:src="@drawable/settings"
+            android:background="@null"
+            android:contentDescription="@string/settings_button">
+
+        </ImageButton>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            style="@style/BUTTON"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Logout"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ContactsList"
+        tools:listitem="@layout/contact_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_below="@id/ContactsTop" />
+
+    </RelativeLayout>

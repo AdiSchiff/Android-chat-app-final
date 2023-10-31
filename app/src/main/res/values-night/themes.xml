@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Chatify" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <!--    Dark mode-->
+    <!--    Screen background if dark mode is on-->
+    <style name="SCREEN">
+        <item name="android:background">@drawable/background_picture</item>
+    </style>
+
+    <!--    Texts color if dark mode is on-->
+    <style name="TEXT">
+        <item name="android:textColor">@color/buttonBackgroundDark</item>
+        <item name="android:textColorHint">@color/buttonBackgroundDark</item>
+    </style>
+
+    <!--    Button background if dark mode is on-->
+    <style name="BUTTON">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/buttonBackgroundDark</item>
+    </style>
+
+    <!--    Image if dark mode is on-->
+    <style name="Image">
+        <item name="android:tint">@color/buttonBackgroundDark</item>
+    </style>
+
+    <!--    Layout if dark mode is on-->
+    <style name="LAYOUT">
+        <item name="android:background">@color/register_backgroundDark</item>
+    </style>
+</resources>
